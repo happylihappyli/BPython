@@ -1,0 +1,3 @@
+def sub_hello() {
+    print("Hello from pkg_bpy.sub_mod")
+}

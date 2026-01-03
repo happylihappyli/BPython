@@ -1,0 +1,8 @@
+import utils
+
+def main() {
+    print("Hello from BPython using braces!")
+    utils.greet()
+}
+
+main()

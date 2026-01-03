@@ -1,0 +1,49 @@
+
+def main() {
+    print("--- Testing Match Statement ---")
+    
+    # Test simple match
+    status = 404
+    match status {
+        case 400 {
+            print("Bad request")
+        }
+        case 404 {
+            print("Not found")
+        }
+        case 418 {
+            print("I'm a teapot")
+        }
+        case _ {
+            print("Something's wrong with the internet")
+        }
+    }
+    
+    # Test match with guard
+    point = (1, 0)
+    match point {
+        case (0, 0) {
+            print("Origin")
+        }
+        case (0, y) {
+            print(f"Y={y}")
+        }
+        case (x, 0) {
+            print(f"X={x}")
+        }
+        case (x, y) {
+            print(f"X={x}, Y={y}")
+        }
+        case _ {
+            print("Not a point")
+        }
+    }
+
+    # Test match without colon and without newlines (more C-like)
+    x = 10
+    match x { case 10 { print("Ten") } case _ { print("Not ten") } }
+}
+
+if __name__ == "__main__" {
+    main()
+}

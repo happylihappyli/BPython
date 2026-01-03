@@ -1,0 +1,11 @@
+import sys
+import pkg_test
+import pkg_test.sub
+
+def main() {
+    print("Testing subdirectory import (clean)...")
+    pkg_test.hello()
+    pkg_test.sub.sub_hello()
+}
+
+main()

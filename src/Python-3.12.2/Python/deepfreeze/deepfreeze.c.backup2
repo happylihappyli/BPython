@@ -1,0 +1,164 @@
+/*
+ * Deepfreeze modules - 包含所有必需符号的占位符文件
+ * 
+ * 这个文件用于解决链接器错误，包含所有缺失的_Py_get_*符号
+ * 实际的deepfreeze.c应该在构建过程中生成，但这里我们提供一个占位符
+ */
+
+#include "Python.h"
+
+/* 空代码对象定义 */
+static struct _PyCode_DEF(4) empty_code = {
+    .ob_base = {
+        .ob_base = {
+            .ob_refcnt = _Py_IMMORTAL_REFCNT,
+            .ob_type = &PyCode_Type,
+        },
+        .ob_size = 0,
+    },
+    .co_consts = (PyObject *)&_Py_SINGLETON(tuple_empty),
+    .co_names = (PyObject *)&_Py_SINGLETON(tuple_empty),
+    .co_exceptiontable = (PyObject *)&_Py_SINGLETON(bytes_empty),
+    .co_flags = 0,
+    .co_argcount = 0,
+    .co_posonlyargcount = 0,
+    .co_kwonlyargcount = 0,
+    .co_framesize = 0,
+    .co_stacksize = 0,
+    .co_firstlineno = 0,
+    .co_nlocalsplus = 0,
+    .co_nlocals = 0,
+    .co_ncellvars = 0,
+    .co_nfreevars = 0,
+    .co_version = 0,
+    .co_localsplusnames = (PyObject *)&_Py_SINGLETON(tuple_empty),
+    .co_localspluskinds = (PyObject *)&_Py_SINGLETON(bytes_empty),
+    .co_filename = (PyObject *)&_Py_SINGLETON(unicode_empty),
+    .co_name = (PyObject *)&_Py_SINGLETON(unicode_empty),
+    .co_qualname = (PyObject *)&_Py_SINGLETON(unicode_empty),
+    .co_linetable = (PyObject *)&_Py_SINGLETON(bytes_empty),
+    ._co_cached = NULL,
+    .co_code_adaptive = "",
+};
+
+PyObject *
+_Py_get_runpy_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get_stat_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get_site_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get___phello___ham_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get_ntpath_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get_importlib_util_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get_genericpath_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get___hello___toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get___phello___ham_eggs_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get___phello___toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get_importlib_machinery_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get_os_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get__sitebuiltins_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get_posixpath_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get___phello___spam_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+PyObject *
+_Py_get_frozen_only_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    return Py_NewRef((PyObject *) &empty_code);
+}
+
+
+/* Deepfreeze初始化函数 */
+void _Py_Deepfreeze_Init(void) {
+    /* 占位符函数 - 实际应该在构建过程中生成 */
+}
+
+void _Py_Deepfreeze_Fini(void) {
+    /* 占位符函数 - 实际应该在构建过程中生成 */
+}

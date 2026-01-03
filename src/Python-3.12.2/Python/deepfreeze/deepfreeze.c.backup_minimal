@@ -1,0 +1,222 @@
+/*
+ * Deepfreeze modules - 完整的占位符文件
+ * 
+ * 这个文件用于解决链接器错误，包含所有必需的_Py_get_*符号
+ * 使用简单的实现来避免编译错误
+ */
+
+#include "Python.h"
+
+/* 简单的空代码对象定义 */
+static PyObject empty_code_object = {
+    .ob_refcnt = 1,
+    .ob_type = &PyCode_Type,
+};
+
+PyObject *
+_Py_get_importlib__bootstrap_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_importlib__bootstrap_external_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_zipimport_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_abc_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_codecs_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_io_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get__collections_abc_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_getpath_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_runpy_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_stat_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_site_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get___phello___ham_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_ntpath_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_importlib_util_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_genericpath_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get___hello___toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get___phello___ham_eggs_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get___phello___toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_importlib_machinery_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_os_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get__sitebuiltins_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_posixpath_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get___phello___spam_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+PyObject *
+_Py_get_frozen_only_toplevel(void)
+{
+    /* 占位符函数 - 返回空代码对象 */
+    Py_INCREF(&empty_code_object);
+    return &empty_code_object;
+}
+
+
+/* 必需的全局变量 */
+uint32_t _Py_next_func_version = 9;
+
+/* Deepfreeze初始化函数 */
+void _Py_Deepfreeze_Init(void) {
+    /* 初始化深度冻结模块 */
+    /* 由于我们使用占位符，这里返回成功 */
+    return;
+}
+
+void _Py_Deepfreeze_Fini(void) {
+    /* 清理深度冻结模块 */
+    return;
+}

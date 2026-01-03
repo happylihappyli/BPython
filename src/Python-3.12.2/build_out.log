@@ -1,0 +1,698 @@
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.6+a918ceb31
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2025/12/26 14:14:47。
+节点 1 上的项目“E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj”(默认目标)。
+KillPython:
+  Killing any running python_d.exe instances...
+  Looking for E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\amd64\python_d.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Common Files\Reallusion\PostgreSQL\bin\postgres.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\svchost.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Users\happyli\AppData\Local\Programs\BIMBaseUpdate\BIMBaseUpdate.exe
+  Found running process: C:\Windows\System32\RuntimeBroker.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\cmd.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\System32\RuntimeBroker.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\System32\DataExchangeHost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\svchost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Common Files\Reallusion\PostgreSQL\bin\postgres.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\svchost.exe
+  Found running process: C:\Windows\System32\DriverStore\FileRepository\ipf_cpu.inf_amd64_7218f3b363a821fe\ipf_helper.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\taskhostw.exe
+  Found running process: C:\Users\happyli\AppData\Local\NhNotifSys\nahimic\nahimicNotifSys.exe
+  Found running process: C:\Windows\System32\svchost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\explorer.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Users\happyli\AppData\Local\GitHubDesktop\app-3.5.4\GitHubDesktop.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Users\happyli\AppData\Local\Programs\BIMBaseUpdate\BIMBaseUpdate.exe
+  Found running process: E:\GitHub3\cpp\BV_WorkSpace\000\bvws.windows.editor.x86_64.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.80\msedgewebview2.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\svchost.exe
+  Found running process: C:\Program Files\Common Files\Reallusion\PostgreSQL\bin\postgres.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: D:\Tools\EverythingToolbar\EverythingToolbar.Launcher.exe
+  Found running process: C:\Users\happyli\AppData\Roaming\Tencent\xwechat\xplugin\Plugins\RadiumWMPF\18055\extracted\runtime\WeChatAppEx.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: D:\Net\Weixin\Weixin.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\DriverStore\FileRepository\realtekservice.inf_amd64_b16b1eb6c6a2820f\RtkAudUService64.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Users\happyli\AppData\Roaming\Tencent\xwechat\xplugin\Plugins\RadiumWMPF\18055\extracted\runtime\WeChatAppEx.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Users\happyli\AppData\Roaming\Tencent\xwechat\xplugin\Plugins\RadiumWMPF\18055\extracted\runtime\WeChatAppEx.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Program Files\Tencent\WeType\1.4.3.8\wetype_renderer.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\svchost.exe
+  Found running process: C:\Windows\ImmersiveControlPanel\SystemSettings.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: D:\Code\flutter\bin\cache\dart-sdk\bin\dart.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\RuntimeBroker.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Common Files\Reallusion\PostgreSQL\bin\postgres.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: D:\Code\DocFetcher\docfetcher-daemon-windows.exe
+  Found running process: C:\Windows\System32\oobe\UserOOBEBroker.exe
+  Found running process: D:\Code\VS2019\Community\MSBuild\Current\Bin\MSBuild.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Program Files (x86)\iFlytek\iFlyIME\3.0.1736\iFlyPlatform.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: D:\Code\Godot_v4.4.1\Godot_v4.4.1-stable_win64.exe
+  Found running process: D:\Net\Feishu\app\Feishu.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Program Files\WindowsApps\A-Volute.Nahimic_1.10.7.0_x64__w2gh52qy24etm\Nahimic3.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.80\msedgewebview2.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\sihost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\WindowsApps\RealtekSemiconductorCorp.RealtekAudioControl_1.40.287.0_x64__dt26b99r8h8gj\RtkUWP.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Microsoft OneDrive\OneDrive.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Windows\System32\cmd.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_525.31002.150.0_x64__cw5n1h2txyewy\WidgetBoard.exe
+  Found running process: D:\Net\Clash.for.Windows-0.20.31-win\Clash for Windows.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Program Files\Common Files\Reallusion\PostgreSQL\bin\postgres.exe
+  Found running process: C:\Windows\System32\dllhost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\RuntimeBroker.exe
+  Found running process: D:\Code\flutter\bin\cache\dart-sdk\bin\dartvm.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Users\happyli\AppData\Local\Programs\BIMBaseUpdate\BIMBaseUpdate.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Net\Clash.for.Windows-0.20.31-win\Clash for Windows.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.12811.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\RuntimeBroker.exe
+  Found running process: C:\Program Files\WindowsApps\Microsoft.YourPhone_1.25102.64.0_x64__8wekyb3d8bbwe\PhoneExperienceHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\svchost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Program Files\Tencent\WeType\1.4.3.8\wetype_update.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\SecurityHealthSystray.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Net\Feishu\app\Feishu.exe
+  Found running process: D:\Net\Clash.for.Windows-0.20.31-win\Clash for Windows.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\svchost.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.80\msedgewebview2.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files (x86)\NVIDIA Corporation\NvNode\NVIDIA Web Helper.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: D:\Net\Weixin\Weixin.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Common Files\Reallusion\PostgreSQL\bin\postgres.exe
+  Found running process: C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.12811.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\dllhost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Net\Clash.for.Windows-0.20.31-win\resources\static\files\win\x64\clash-win64.exe
+  Found running process: C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\NahimicSvc64.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Users\happyli\AppData\Local\Programs\BIMBaseUpdate\BIMBaseUpdate.exe
+  Found running process: D:\Net\Weixin\Weixin.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\SystemApps\Microsoft.Windows.AppRep.ChxApp_cw5n1h2txyewy\CHXSmartScreen.exe
+  Found running process: C:\Program Files\WindowsApps\Microsoft.StartExperiencesApp_1.195.0.0_x64__8wekyb3d8bbwe\MicrosoftStartFeedProvider\MicrosoftStartFeedProvider.exe
+  Found running process: C:\Users\happyli\AppData\Roaming\Tencent\xwechat\xplugin\Plugins\RadiumWMPF\18055\extracted\runtime\WeChatAppEx.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Program Files (x86)\iFlytek\iFlyIME\3.0.1736\iFlyInput.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: E:\GitHub3\cpp\BV_WorkSpace\000\bvws.windows.editor.x86_64.console.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\svchost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Users\happyli\AppData\Roaming\Trae CN\User\globalStorage\llvm-vs-code-extensions.vscode-clangd\install\21.1.0\clangd_21.1.0\bin\clangd.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.80\msedgewebview2.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Windows\System32\ApplicationFrameHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\VS2022\Community\VC\Tools\MSVC\14.44.35207\bin\Hostx64\x64\vctip.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\SysWOW64\NahimicSvc32.exe
+  Found running process: D:\Net\SunLogin\SunloginClient\AweSun.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: D:\Net\Feishu\app\Feishu.exe
+  Found running process: D:\MMX\Snipaste-2.8.8-Beta-x64\Snipaste.exe
+  Found running process: C:\Users\happyli\AppData\Local\Programs\BIMBaseUpdate\BIMBaseUpdate.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\anaconda3\python.exe
+  Found running process: C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.14.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe
+  Found running process: D:\Net\Feishu\app\Feishu.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: E:\GitHub3\cpp\BV_WorkSpace\000\bvws.windows.editor.x86_64.console.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\SystemApps\Microsoft.LockApp_cw5n1h2txyewy\LockApp.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe
+  Found running process: D:\Net\Clash.for.Windows-0.20.31-win\Clash for Windows.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Program Files\LLVM\bin\clangd.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\Godot_v4.4.1\Godot_v4.4.1-stable_win64.exe
+  Found running process: D:\Net\Feishu\app\Feishu.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Users\happyli\AppData\Local\Programs\BIMBaseUpdate\BIMBaseUpdate.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Users\happyli\AppData\Local\GitHubDesktop\app-3.5.4\GitHubDesktop.exe
+  Found running process: C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.27.350.0_x64__8wekyb3d8bbwe\WindowsPackageManagerServer.exe
+  Found running process: C:\Windows\System32\svchost.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Users\happyli\AppData\Local\GitHubDesktop\app-3.5.4\GitHubDesktop.exe
+  Found running process: D:\Code\flutter\bin\cache\dart-sdk\bin\dart.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Windows\System32\dllhost.exe
+  Found running process: C:\Windows\System32\RuntimeBroker.exe
+  Found running process: C:\Program Files\Common Files\Reallusion\PostgreSQL\bin\postgres.exe
+  Found running process: D:\Code\flutter\bin\cache\dart-sdk\bin\dart.exe
+  Found running process: D:\Code\VS2019\Community\VC\Tools\MSVC\14.29.30133\bin\Hostx86\x64\mspdbsrv.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\RuntimeBroker.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\AppActions.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.80\msedgewebview2.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Users\happyli\AppData\Local\Programs\BIMBaseUpdate\BIMBaseUpdate.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: D:\Net\Weixin\Weixin.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Windows\System32\RuntimeBroker.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: D:\Net\Feishu\app\Feishu.exe
+  Found running process: C:\Windows\System32\ShellHost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: D:\Code\TraeCN\Trae CN.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.80\msedgewebview2.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: D:\Net\Feishu\app\Feishu.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: D:\Net\baiduNetDisk\YunDetectService.exe
+  Found running process: C:\Program Files\Microsoft Office\root\Office16\SDXHelper.exe
+  Found running process: C:\Program Files\Google\Chrome\Application\chrome.exe
+  Found running process: C:\Users\happyli\AppData\Roaming\Tencent\xwechat\xplugin\Plugins\RadiumWMPF\18055\extracted\runtime\WeChatAppEx.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.12811.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+  Found running process: C:\Users\happyli\AppData\Local\GitHubDesktop\app-3.5.4\GitHubDesktop.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\dllhost.exe
+  Found running process: C:\Program Files\Tencent\WeType\1.4.3.8\wetype_server.exe
+  Found running process: D:\Code\Godot_v4.4.1\Godot_v4.4.1-stable_win64_console.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: D:\Net\Weixin\4.1.6.12\crashpad_handler.exe
+  Found running process: C:\Program Files\Microsoft OneDrive\25.222.1112.0002\OneDrive.Sync.Service.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Users\happyli\AppData\Roaming\Tencent\xwechat\xplugin\Plugins\RadiumWMPF\18055\extracted\runtime\WeChatAppEx.exe
+  Found running process: C:\Windows\System32\dllhost.exe
+  Found running process: D:\Code\flutter\bin\cache\dart-sdk\bin\dart.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Users\happyli\AppData\Roaming\Tencent\xwechat\xplugin\Plugins\RadiumWMPF\18055\extracted\runtime\WeChatAppEx.exe
+  Found running process: C:\Windows\System32\conhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: C:\Users\happyli\AppData\Roaming\Trae CN\User\globalStorage\llvm-vs-code-extensions.vscode-clangd\install\21.1.0\clangd_21.1.0\bin\clangd.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Program Files\NVIDIA Corporation\NvContainer\nvcontainer.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: D:\Net\Feishu\app\Feishu.exe
+  Found running process: C:\Windows\SysWOW64\dllhost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Users\happyli\AppData\Roaming\Tencent\xwechat\xplugin\Plugins\RadiumWMPF\18055\extracted\runtime\WeChatAppEx.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.12811.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe
+  Found running process: D:\Code\Trae\Trae.exe
+  Found running process: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\143.0.3650.96\msedgewebview2.exe
+  Found running process: C:\Windows\System32\backgroundTaskHost.exe
+  Found running process: E:\GitHub3\cpp\BV_WorkSpace\000\bvws.windows.editor.x86_64.exe
+  Found running process: D:\Net\Feishu\app\Feishu.exe
+FindPythonForBuild:
+  Using PythonForBuild=E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\win32\python.exe
+_RegenKeywords:
+正在跳过目标“_RegenKeywords”，因为所有输出文件相对于输入文件而言都是最新的。
+Regen:
+  Generated sources are up to date
+_GetBuildInfo:
+  Getting build info from git
+  git name-rev --name-only HEAD > "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\gitbranch.txt"
+  fatal: not a git repository (or any of the parent directories): .git
+E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(613,5): warning MSB3073: 命令“git name-rev --name-only HEAD > "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\gitbranch.txt"”已退出，代码为 128。
+  上一错误已转换为警告，因为调用任务时指定了 ContinueOnError=true。
+E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(613,5): warning MSB4181: “Exec”任务返回了 false，但未记录错误。
+  上一错误已转换为警告，因为调用任务时指定了 ContinueOnError=true。
+  继续生成，因为任务“Exec”的“ContinueOnError”设置为“true”。
+  git rev-parse --short HEAD > "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\gitversion.txt"
+  fatal: not a git repository (or any of the parent directories): .git
+E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(614,5): warning MSB3073: 命令“git rev-parse --short HEAD > "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\gitversion.txt"”已退出，代码为 128。
+  上一错误已转换为警告，因为调用任务时指定了 ContinueOnError=true。
+E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(614,5): warning MSB4181: “Exec”任务返回了 false，但未记录错误。
+  上一错误已转换为警告，因为调用任务时指定了 ContinueOnError=true。
+  继续生成，因为任务“Exec”的“ContinueOnError”设置为“true”。
+  git describe --all --always --dirty > "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\gittag.txt"
+  fatal: not a git repository (or any of the parent directories): .git
+E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(615,5): warning MSB3073: 命令“git describe --all --always --dirty > "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\gittag.txt"”已退出，代码为 128。
+  上一错误已转换为警告，因为调用任务时指定了 ContinueOnError=true。
+E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(615,5): warning MSB4181: “Exec”任务返回了 false，但未记录错误。
+  上一错误已转换为警告，因为调用任务时指定了 ContinueOnError=true。
+  继续生成，因为任务“Exec”的“ContinueOnError”设置为“true”。
+  Building : 
+InitializeBuildStatus:
+  正在对“E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pythoncore.tlog\unsuccessfulbuild”执行 Touch 任务。
+ClCompile:
+  所有输出均为最新。
+  所有输出均为最新。
+  所有输出均为最新。
+  所有输出均为最新。
+  所有输出均为最新。
+  所有输出均为最新。
+ResourceCompile:
+  所有输出均为最新。
+Link:
+  D:\Code\VS2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\amd64\python312_d.dll" /NOLOGO /LIBPATH:"E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\amd64\\" version.lib ws2_32.lib pathcch.lib bcrypt.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBC /MANIFEST:NO /DEBUG /PDB:"E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\amd64\python312_d.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\amd64\python312_d.lib" /MACHINE:X64 /DLL "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\python_nt.res"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\getpath.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_abc.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_bisectmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\blake2module.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\blake2b_impl.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\blake2s_impl.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_codecsmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_collectionsmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_contextvarsmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_csv.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_functoolsmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\Hacl_Hash_MD5.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\Hacl_Hash_SHA1.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\Hacl_Hash_SHA2.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\Hacl_Hash_SHA3.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_heapqmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_json.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_localemodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_lsprof.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_pickle.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_randommodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\sre.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_stat.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_struct.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_weakref.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\arraymodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\atexitmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\audioop.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\binascii.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\cmathmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_datetimemodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\errnomodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\faulthandler.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\gcmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\getbuildinfo.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\itertoolsmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\main.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\mathmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\md5module.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\mmapmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_opcode.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_operator.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\posixmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\rotatingtree.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\sha1module.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\sha2module.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\sha3module.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\signalmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_statisticsmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\symtablemodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_threadmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_tracemalloc.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_typingmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\timemodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\xxsubtype.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_xxsubinterpretersmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_xxinterpchannelsmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\fileio.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\bytesio.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\stringio.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\bufferedio.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\iobase.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\textio.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\winconsoleio.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_iomodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_codecs_cn.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_codecs_hk.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_codecs_iso2022.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_codecs_jp.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_codecs_kr.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_codecs_tw.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\multibytecodec.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_winapi.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\abstract.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\boolobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\bytearrayobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\bytes_methods.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\bytesobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\call.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\capsule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\cellobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\classobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\codeobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\complexobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\descrobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\dictobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\enumobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\exceptions.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\fileobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\floatobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\frameobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\funcobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\genericaliasobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\genobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\interpreteridobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\iterobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\listobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\longobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\memoryobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\methodobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\moduleobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\namespaceobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\object.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\obmalloc.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\odictobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\picklebufobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\rangeobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\setobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\sliceobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\structseq.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\tupleobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\typeobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\typevarobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\unicodectype.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\unicodeobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\unionobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\weakrefobject.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\myreadline.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\tokenizer.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\token.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pegen.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pegen_errors.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\action_helpers.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\parser.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\string_parser.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\peg_api.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\invalid_parameter_handler.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\winreg.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\config.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\msvcrtmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pyhash.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\_warnings.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\asdl.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\assemble.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\ast.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\ast_opt.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\ast_unparse.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\bltinmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\bootstrap_hash.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\ceval.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\codecs.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\compile.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\context.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\dynamic_annotations.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\dynload_win.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\errors.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\fileutils.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\flowgraph.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\formatter_unicode.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\frame.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\frozen.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\future.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\getargs.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\getcompiler.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\getcopyright.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\getopt.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\getplatform.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\getversion.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\ceval_gil.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\hamt.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\hashtable.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\import.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\importdl.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\initconfig.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\intrinsics.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\instrumentation.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\legacy_tracing.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\marshal.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\modsupport.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\mysnprintf.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\mystrtoul.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pathconfig.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\perf_trampoline.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\preconfig.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pyarena.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pyctype.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pyfpe.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pylifecycle.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pymath.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pytime.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pystate.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pystrcmp.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pystrhex.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pystrtod.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\dtoa.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\Python-ast.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\Python-tokenize.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\pythonrun.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\specialize.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\suggestions.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\structmember.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\symtable.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\sysmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\thread.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\traceback.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\tracemalloc.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\deepfreeze.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\zlibmodule.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\adler32.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\compress.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\crc32.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\deflate.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\infback.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\inffast.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\inflate.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\inftrees.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\trees.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\uncompr.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\zutil.obj"
+  "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\dl_nt.obj"
+    正在创建库 E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\amd64\python312_d.lib 和对象 E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\amd64\python312_d.exp
+frozen.obj : error LNK2001: 无法解析的外部符号 _Py_get_posixpath_toplevel [E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj]
+frozen.obj : error LNK2001: 无法解析的外部符号 _Py_get_os_toplevel [E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj]
+E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\amd64\python312_d.dll : fatal error LNK1120: 2 个无法解析的外部命令 [E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj]
+已完成生成项目“E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj”(默认目标)的操作 - 失败。
+
+生成失败。
+
+“E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj”(默认目标) (1) ->
+(_GetBuildInfo 目标) -> 
+  E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(613,5): warning MSB3073: 命令“git name-rev --name-only HEAD > "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\gitbranch.txt"”已退出，代码为 128。
+  E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(613,5): warning MSB4181: “Exec”任务返回了 false，但未记录错误。
+
+
+“E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj”(默认目标) (1) ->
+  E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(614,5): warning MSB3073: 命令“git rev-parse --short HEAD > "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\gitversion.txt"”已退出，代码为 128。
+  E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(614,5): warning MSB4181: “Exec”任务返回了 false，但未记录错误。
+
+
+“E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj”(默认目标) (1) ->
+  E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(615,5): warning MSB3073: 命令“git describe --all --always --dirty > "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\pythoncore\gittag.txt"”已退出，代码为 128。
+  E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj(615,5): warning MSB4181: “Exec”任务返回了 false，但未记录错误。
+
+
+“E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj”(默认目标) (1) ->
+(Link 目标) -> 
+  frozen.obj : error LNK2001: 无法解析的外部符号 _Py_get_posixpath_toplevel [E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj]
+  frozen.obj : error LNK2001: 无法解析的外部符号 _Py_get_os_toplevel [E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj]
+  E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\amd64\python312_d.dll : fatal error LNK1120: 2 个无法解析的外部命令 [E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\pythoncore.vcxproj]
+
+    6 个警告
+    3 个错误
+
+已用时间 00:00:02.26

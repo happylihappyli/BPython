@@ -1,0 +1,48 @@
+def main() {
+    print("--- Testing IF/ELSE ---")
+    x = 10
+    if x > 5 {
+        print("x is greater than 5")
+    } else {
+        print("x is small")
+    }
+
+    print("\n--- Testing FOR Loop ---")
+    items = [1, 2, 3]
+    for i in items {
+        print(f"Item: {i}")
+    }
+
+    print("\n--- Testing WHILE Loop ---")
+    count = 0
+    while count < 3 {
+        print(f"Count: {count}")
+        count += 1
+    }
+
+    print("\n--- Testing Nested Blocks ---")
+    for i in range(3) {
+        if i % 2 == 0 {
+            print(f"{i} is even")
+        } else {
+            print(f"{i} is odd")
+        }
+    }
+
+    print("\n--- Testing Break/Continue ---")
+    for i in range(10) {
+        if i == 2 {
+            print("Skipping 2")
+            continue
+        }
+        if i == 5 {
+            print("Breaking at 5")
+            break
+        }
+        print(f"Processing {i}")
+    }
+}
+
+if __name__ == "__main__" {
+    main()
+}

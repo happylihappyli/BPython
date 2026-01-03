@@ -1,0 +1,8 @@
+def main() {
+    d = {'a': {'b': 1}}
+    print(d)
+}
+
+if __name__ == "__main__" {
+    main()
+}

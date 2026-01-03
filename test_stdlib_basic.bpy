@@ -1,0 +1,76 @@
+import os
+import sys
+import math
+import random
+import time
+from datetime import datetime, timedelta
+from pathlib import Path
+
+def test_os_path() {
+    print("\n--- Testing OS & Pathlib ---")
+    current_dir = Path(".")
+    print(f"Current Directory: {current_dir.resolve()}")
+    
+    # List files using loop with braces
+    print("Files in current dir (first 5):")
+    count = 0
+    for file in current_dir.iterdir() {
+        if count >= 5 {
+            break
+        }
+        if file.is_file() {
+            print(f"  File: {file.name}")
+            count += 1
+        }
+    }
+}
+
+def test_datetime() {
+    print("\n--- Testing Datetime ---")
+    now = datetime.now()
+    print(f"Current time: {now}")
+    
+    future = now + timedelta(days=7)
+    print(f"One week later: {future}")
+    
+    # Brace syntax with if
+    if future > now {
+        print("Time flows forward confirmed.")
+    }
+}
+
+def test_math_random() {
+    print("\n--- Testing Math & Random ---")
+    # Math
+    radius = 5
+    area = math.pi * math.pow(radius, 2)
+    print(f"Circle area (r={radius}): {area:.2f}")
+    
+    # Random
+    lucky_numbers = []
+    for i in range(5) {
+        num = random.randint(1, 100)
+        lucky_numbers.append(num)
+    }
+    print(f"Lucky numbers: {lucky_numbers}")
+    
+    # Match statement with math (if supported)
+    val = lucky_numbers[0] % 2
+    match val {
+        case 0 { print(f"First number {lucky_numbers[0]} is Even") }
+        case 1 { print(f"First number {lucky_numbers[0]} is Odd") }
+    }
+}
+
+def main() {
+    print(f"Python Version: {sys.version}")
+    print(f"Platform: {sys.platform}")
+    
+    test_os_path()
+    test_datetime()
+    test_math_random()
+}
+
+if __name__ == "__main__" {
+    main()
+}

@@ -1,0 +1,30 @@
+def main() {
+    print("--- Testing Try/Except ---")
+    try {
+        x = 1 / 0
+    } except ZeroDivisionError {
+        print("Caught division by zero")
+    } finally {
+        print("Finally block executed")
+    }
+    
+    print("--- Testing With Statement ---")
+    # Using a simple mock context manager
+    class MockContext {
+        def __enter__(self) {
+            print("Entering context")
+            return self
+        }
+        def __exit__(self, exc_type, exc_val, exc_tb) {
+            print("Exiting context")
+        }
+    }
+        
+    with MockContext() as mc {
+        print("Inside with block")
+    }
+}
+
+if __name__ == "__main__" {
+    main()
+}

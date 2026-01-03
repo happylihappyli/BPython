@@ -1,0 +1,5 @@
+import sys
+print("Start", flush=True)
+print(f"Maxsize: {sys.maxsize}", flush=True)
+is_64 = sys.maxsize > 2**32
+print(f"64-bit: {is_64}", flush=True)

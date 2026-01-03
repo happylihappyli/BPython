@@ -1,0 +1,25 @@
+# BPython 花括号语法测试 - 无缩进
+# 预期：正常运行，因为花括号应该定义块，不需要缩进
+def greet(name) {
+    if (name) {
+    print("Hello, " + name + " from .bpy!")
+    } else {
+    print("Hello from .bpy!")
+    }
+}
+
+class Greeter {
+        def __init__(self) {
+            self.msg = "BPython Class with Braces"
+        }
+
+        def say(self) {
+                print(self.msg)
+        }
+}
+
+if (__name__ == "__main__") {
+    greet("测试")
+    g = Greeter()
+    g.say()
+}

@@ -1,0 +1,17 @@
+import sys
+import importlib._bootstrap_external
+print("DEBUG: Suffixes:", importlib._bootstrap_external.SOURCE_SUFFIXES)
+print("DEBUG: be id:", id(importlib._bootstrap_external))
+print("DEBUG: be file:", getattr(importlib._bootstrap_external, '__file__', 'unknown'))
+
+import pkg_test
+print("DEBUG: pkg_test path:", pkg_test.__path__)
+import pkg_test.sub
+
+def main() {
+    print("Testing subdirectory import...")
+    pkg_test.hello()
+    pkg_test.sub.sub_hello()
+}
+
+main()

@@ -1,0 +1,58 @@
+import sys
+import os
+# sys.path.append(os.path.abspath("local_lib"))
+sys.path.append(os.path.join(os.path.dirname(__file__), "local_lib"))
+import numpy as np
+
+def main() {
+    print(f"Numpy version: {np.__version__}")
+    
+    # 1. 基础数组创建
+    a = np.array([1, 2, 3])
+    print(f"Array a: {a}")
+
+    # 2. 矩阵乘法 (Matrix Multiplication)
+    # 创建两个 2x2 矩阵
+    m1 = np.array([[1, 2], [3, 4]])
+    m2 = np.array([[5, 6], [7, 8]])
+    
+    print(f"Matrix m1:\n{m1}")
+    print(f"Matrix m2:\n{m2}")
+
+    # 使用 @ 运算符进行矩阵乘法
+    result_matmul = m1 @ m2
+    print(f"Matrix Multiplication (m1 @ m2):\n{result_matmul}")
+
+    # 使用 np.dot 进行点积/矩阵乘法
+    result_dot = np.dot(m1, m2)
+    print(f"Dot Product (np.dot(m1, m2)):\n{result_dot}")
+
+    # 3. 统计功能 (Statistics)
+    random_data = np.random.rand(3, 3)
+    print(f"Random 3x3 Matrix:\n{random_data}")
+    print(f"Mean: {np.mean(random_data)}")
+    print(f"Std Dev: {np.std(random_data)}")
+    print(f"Sum: {np.sum(random_data)}")
+
+    # 4. 广播机制 (Broadcasting)
+    b = np.array([10, 20])
+    # 将 b 加到 m1 的每一行
+    # m1 (2x2) + b (2,) -> b 广播为 [[10, 20], [10, 20]]
+    result_broadcasting = m1 + b
+    print(f"Broadcasting (m1 + [10, 20]):\n{result_broadcasting}")
+
+    # 5. 线性代数 (Linear Algebra) - 求逆
+    try {
+        inv_m1 = np.linalg.inv(m1)
+        print(f"Inverse of m1:\n{inv_m1}")
+        # 验证: m1 @ inv_m1 应该接近单位矩阵
+        identity_check = m1 @ inv_m1
+        print(f"m1 @ inv_m1 (Should be Identity):\n{identity_check}")
+    } except np.linalg.LinAlgError as e {
+        print(f"Matrix inversion failed: {e}")
+    }
+}
+
+if __name__ == "__main__" {
+    main()
+}

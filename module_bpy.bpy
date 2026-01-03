@@ -1,0 +1,3 @@
+def hello_from_bpy() {
+    print("Hello from module_bpy.bpy")
+}

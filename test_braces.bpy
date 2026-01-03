@@ -1,0 +1,25 @@
+# BPython 花括号语法测试
+# 预期：正常运行
+def greet(name) {
+    if (name) {
+        print(f"Hello, {name} from .bpy!")
+    } else {
+        print("Hello from .bpy!")
+    }
+}
+
+class Greeter {
+    def __init__(self) {
+        self.msg = "BPython Class with Braces"
+    }
+    
+    def say(self) {
+        print(self.msg)
+    }
+}
+
+if (__name__ == "__main__") {
+    greet("World")
+    g = Greeter()
+    g.say()
+}

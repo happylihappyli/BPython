@@ -1,0 +1,4 @@
+print("Initializing pkg_bpy")
+def pkg_hello() {
+    print("Hello from pkg_bpy package")
+}

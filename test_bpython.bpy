@@ -1,0 +1,11 @@
+
+def main() {
+    print("Hello from BPython using braces!");
+    if True {
+        print("Braces block works.");
+    }else{
+        print("否则");
+    }
+}
+
+main()

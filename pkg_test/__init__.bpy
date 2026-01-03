@@ -1,0 +1,3 @@
+def hello() {
+    print("Hello from pkg_test.__init__.bpy")
+}

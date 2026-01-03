@@ -1,0 +1,22 @@
+import sys
+print("Importing os")
+import os
+print("Importing sys")
+import sys
+print("Importing importlib.util")
+import importlib.util
+print("Importing py_compile")
+import py_compile
+print("Importing struct")
+import struct
+print("Importing filecmp")
+import filecmp
+print("Importing functools")
+import functools
+print("Importing pathlib")
+import pathlib
+print("Importing argparse")
+import argparse
+print("Importing compileall")
+import compileall
+print("Done")

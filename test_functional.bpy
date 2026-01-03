@@ -1,0 +1,92 @@
+import itertools
+import functools
+import operator
+
+def test_lambda_map() {
+    print("\n--- Testing Lambda & Map ---")
+    nums = [1, 2, 3, 4, 5]
+    
+    # Brace syntax with lambda
+    # Note: lambda usually doesn't use braces for its body in standard Python, 
+    # but let's see if it works inside a block
+    squared = list(map(lambda x: x**2, nums))
+    print(f"Squared: {squared}")
+    
+    # Filter with lambda
+    evens = list(filter(lambda x: x % 2 == 0, nums))
+    print(f"Evens: {evens}")
+}
+
+def test_itertools() {
+    print("\n--- Testing Itertools ---")
+    # Infinite counter with break
+    counter = itertools.count(start=10)
+    print("Counter:", end=" ")
+    for i in counter {
+        if i > 13 { break }
+        print(i, end=" ")
+    }
+    print("")
+    
+    # Cycle
+    colors = ["Red", "Green"]
+    cycler = itertools.cycle(colors)
+    print("Cycle:", end=" ")
+    for i in range(5) {
+        print(next(cycler), end=" ")
+    }
+    print("")
+    
+    # Chain
+    chained = list(itertools.chain([1, 2], [3, 4]))
+    print(f"Chained: {chained}")
+}
+
+def test_functools() {
+    print("\n--- Testing Functools ---")
+    
+    # Reduce
+    nums = [1, 2, 3, 4]
+    product = functools.reduce(operator.mul, nums)
+    print(f"Product of {nums}: {product}")
+    
+    # Partial
+    def power(base, exp) {
+        return base ** exp
+    }
+    square = functools.partial(power, exp=2)
+    cube = functools.partial(power, exp=3)
+    
+    print(f"Square of 5: {square(5)}")
+    print(f"Cube of 3: {cube(3)}")
+}
+
+def fib_generator(n) {
+    a, b = 0, 1
+    count = 0
+    while count < n {
+        yield a
+        a, b = b, a + b
+        count += 1
+    }
+}
+
+def test_generator() {
+    print("\n--- Testing Generator ---")
+    print("Fibonacci(6):", end=" ")
+    for num in fib_generator(6) {
+        print(num, end=" ")
+    }
+    print("")
+}
+
+def main() {
+    test_lambda_map()
+    test_itertools()
+    test_functools()
+    test_generator()
+}
+
+if __name__ == "__main__" {
+    main()
+}

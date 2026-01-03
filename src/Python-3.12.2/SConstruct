@@ -1,0 +1,229 @@
+import os
+import sys
+
+# Define the environment
+env = Environment(tools=['default'], ENV=os.environ)
+
+# Set up Clang-CL for Windows
+env.Replace(CC='clang-cl')
+env.Replace(CXX='clang-cl')
+env.Replace(LINK='link')
+env.Replace(SHLINK='link')
+env.Replace(AR='lib')
+
+# Force MSVC file naming and linking conventions
+env['SHLIBPREFIX'] = ''
+env['SHLIBSUFFIX'] = '.dll'
+env['IMPLIBPREFIX'] = ''
+env['IMPLIBSUFFIX'] = '.lib'
+env['LIBPREFIX'] = ''
+env['LIBSUFFIX'] = '.lib'
+env['OBJSUFFIX'] = '.obj'
+env['SHOBJSUFFIX'] = '.obj'
+env['PROGSUFFIX'] = '.exe'
+
+# Build configuration (Release)
+# clang-cl uses /O2 for optimization, /MD for multithreaded DLL runtime
+env.Append(CCFLAGS=['/O2', '/MD', '/Zi'])
+env.Append(LINKFLAGS=['/DEBUG'])
+
+# Include directories
+env.Append(CPPPATH=[
+    '.',
+    'Include',
+    'Include/internal',
+    'Modules/_hacl/include',
+    'Modules/_hacl/internal',
+    'Python',
+    'PC',
+])
+
+# Macros
+env.Append(CPPDEFINES=[
+    '_USRDLL',
+    'Py_BUILD_CORE',
+    'Py_BUILD_CORE_BUILTIN',
+    'Py_ENABLE_SHARED',
+    'MS_COREDLL',
+    ('MS_DLL_ID', '\\"3.12\\"'),
+    ('Py_NO_ENABLE_SHARED', '0'), # Explicitly enable shared
+    ('PY3_DLLNAME', 'L\\"python3.dll\\"'),
+    'PREFIX=\\".\\"',
+    'EXEC_PREFIX=\\".\\"',
+    'VERSION=\\"3.12\\"',
+    'VPATH=\\".\\"',
+    'PLATLIBDIR=\\"lib\\"',
+])
+
+# Source files for pythoncore
+# We use Glob to approximate the vcxproj list. 
+# Adjustments might be needed if unwanted files are included.
+
+pythoncore_sources = []
+
+# Modules
+pythoncore_sources.extend(Glob('Modules/*.c'))
+
+# Add PC sources for Windows
+pythoncore_sources.extend([
+    'PC/dl_nt.c',
+    'PC/config.c',
+    'PC/msvcrtmodule.c',
+    'PC/winreg.c',
+    'PC/invalid_parameter_handler.c',
+])
+
+# Exclude modules requiring external libraries for now
+excludes = [
+    'Modules/_bz2module.c',
+    'Modules/_lzmamodule.c', 
+    'Modules/_ssl.c',
+    'Modules/_hashlib.c',
+    'Modules/_tkinter.c',
+    'Modules/_sqlite3.c', 
+    'Modules/zlibmodule.c', 
+    'Modules/_ctypes.c', 
+    'Modules/_decimal.c', 
+    'Modules/_gdbmmodule.c',
+    'Modules/_dbmmodule.c',
+    'Modules/_uuidmodule.c', 
+    'Modules/_zoneinfo.c',
+    'Modules/readline.c',
+    'Modules/_curses.c',
+    'Modules/_curses_panel.c',
+    'Modules/xxmodule.c',
+    'Modules/xxlimited.c',
+    'Modules/xxlimited_35.c',
+    'Modules/_cryptmodule.c',
+    'Modules/_scproxy.c',
+    'Modules/fcntlmodule.c',
+    'Modules/grpmodule.c',
+    'Modules/nismodule.c',
+    'Modules/pwdmodule.c',
+    'Modules/resource.c',
+    'Modules/syslogmodule.c',
+    'Modules/termios.c',
+    'Modules/spwdmodule.c',
+    'Modules/_cursesmodule.c',
+    'Modules/_curses_panel.c',
+    'Modules/_elementtree.c',
+    'Modules/_hashopenssl.c',
+    'Modules/_posixsubprocess.c',
+    'Modules/_testcapimodule.c',
+    'Modules/_testclinic.c',
+    'Modules/_testimportmultiple.c',
+    'Modules/_testinternalcapi.c',
+    'Modules/_testmultiphase.c',
+    'Modules/_testsinglephase.c',
+    'Modules/_testbuffer.c',
+    'Modules/socketmodule.c', 
+    'Modules/ossaudiodev.c',
+    'Modules/pyexpat.c',
+    'Modules/tkappinit.c',
+    'Python/bytecodes.c',
+    'Modules/python.c',
+    'Python/frozen_modules/cvs',
+    'Python/dup2.c',
+    'Python/dynload_aix.c',
+    'Python/dynload_dl.c',
+    'Python/dynload_hpux.c',
+    'Python/dynload_next.c',
+    'Python/dynload_shlib.c',
+    'Python/dynload_stub.c',
+    'Python/emscripten_signal.c',
+    'Python/frozenmain.c',
+    'Modules/getpath_noop.c',
+    'Modules/selectmodule.c',
+    'Modules/unicodedata.c',
+]
+
+pythoncore_sources.extend(Glob('Modules/_io/*.c'))
+pythoncore_sources.extend(Glob('Modules/_sre/*.c'))
+pythoncore_sources.extend(Glob('Modules/_blake2/*.c'))
+pythoncore_sources.extend(Glob('Modules/cjkcodecs/*.c'))
+pythoncore_sources.extend(Glob('Modules/_hacl/*.c'))
+
+# Objects
+pythoncore_sources.extend(Glob('Objects/*.c'))
+
+# Parser
+pythoncore_sources.extend(Glob('Parser/*.c'))
+
+# Python
+pythoncore_sources.extend(Glob('Python/*.c'))
+pythoncore_sources.extend(['Python/deepfreeze/deepfreeze.c'])
+
+# Helper to filter sources
+def filter_sources(sources, excludes):
+    # Normalize path separators to / for comparison
+    return [s for s in sources if str(s).replace(os.sep, '/').replace('\\', '/') not in excludes]
+
+pythoncore_sources = filter_sources(pythoncore_sources, excludes)
+
+# Define the shared library
+# We need to link against system libraries
+env.Append(LIBS=['user32', 'advapi32', 'shell32', 'ws2_32', 'version', 'shlwapi', 'bcrypt', 'Pathcch', 'ucrtd', 'vcruntimed', 'msvcrtd'])
+
+# Python Core DLL
+pythoncore = env.SharedLibrary('python312', pythoncore_sources)
+
+# Python Executable
+python_exe_sources = ['Programs/python.c']
+python_exe = env.Program('bpython', python_exe_sources, LIBS=['python312'] + env['LIBS'], LIBPATH=['.'])
+
+# Ensure pythoncore is built before python.exe
+Depends(python_exe, pythoncore)
+
+
+# Extensions
+
+# Helper for extensions
+def build_extension(name, sources, includes=[], defines=[], libs=[], libpaths=[]):
+    # Clone env to avoid polluting the main environment with module-specific settings
+    mod_env = env.Clone()
+    
+    # Remove Core definitions that shouldn't be in extensions
+    core_defines = ['Py_BUILD_CORE', 'Py_BUILD_CORE_BUILTIN', 'MS_COREDLL']
+    mod_env['CPPDEFINES'] = [d for d in mod_env['CPPDEFINES'] 
+                             if d not in core_defines and 
+                             not (isinstance(d, str) and (d.startswith('PREFIX=') or d.startswith('EXEC_PREFIX=')))]
+    
+    if name == 'pyexpat':
+        # Remove PREFIX and EXEC_PREFIX macros which conflict with expat (already handled above generically)
+        pass
+
+    mod_env.Append(CPPPATH=includes)
+    mod_env.Append(CPPDEFINES=defines)
+    mod_env.Append(LIBS=libs)
+    if libpaths:
+        mod_env.Append(LIBPATH=libpaths)
+    
+    # We link against python312.lib. 
+    # SCons might need to know where it is.
+    # We added LIBPATH=['.'] to Program, we should add it here too.
+    mod_env.Append(LIBPATH=['.'])
+    
+    # On Windows, we need to link against the import library of the core DLL
+    mod_env.Append(LIBS=['python312'])
+    
+    # Build the shared library (pyd)
+    # Pyd files are DLLs with .pyd extension
+    mod_env['SHLIBSUFFIX'] = '.pyd'
+    
+    return mod_env.SharedLibrary(name, sources)
+
+# Build extensions
+# _socket
+build_extension('_socket', ['Modules/socketmodule.c'], libs=['ws2_32', 'iphlpapi', 'rpcrt4'])
+
+# select
+build_extension('select', ['Modules/selectmodule.c'], libs=['ws2_32'])
+
+# unicodedata
+build_extension('unicodedata', ['Modules/unicodedata.c'])
+
+# zlib
+build_extension('zlib', ['Modules/zlibmodule.c'], 
+                includes=[r'D:\Code\anaconda3\Library\include'], 
+                libs=['zlib'], 
+                libpaths=[r'D:\Code\anaconda3\Library\lib'])

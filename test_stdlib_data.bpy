@@ -1,0 +1,97 @@
+import json
+import csv
+import sqlite3
+import re
+import os
+
+def test_json() {
+    print("\n--- Testing JSON ---")
+    data = {
+        "name": "BPython",
+        "features": ["Braces", "Compatible", "Fast"],
+        "version": 3.12
+    }
+    
+    # Dump to string
+    json_str = json.dumps(data, indent=2)
+    print(f"JSON String:\n{json_str}")
+    
+    # Parse back
+    parsed = json.loads(json_str)
+    if parsed["name"] == "BPython" {
+        print("JSON roundtrip successful")
+    }
+}
+
+def test_csv() {
+    print("\n--- Testing CSV ---")
+    filename = "test_data.csv"
+    
+    # Write CSV
+    with open(filename, 'w', newline='') as f {
+        writer = csv.writer(f)
+        writer.writerow(["ID", "Name", "Score"])
+        writer.writerow([1, "Alice", 95])
+        writer.writerow([2, "Bob", 88])
+    }
+    
+    # Read CSV
+    with open(filename, 'r') as f {
+        reader = csv.reader(f)
+        for row in reader {
+            print(f"Row: {row}")
+        }
+    }
+    
+    # Clean up
+    os.remove(filename)
+}
+
+def test_sqlite() {
+    print("\n--- Testing SQLite ---")
+    # In-memory database
+    conn = sqlite3.connect(":memory:")
+    cursor = conn.cursor()
+    
+    try {
+        cursor.execute("CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT)")
+        cursor.execute("INSERT INTO users (name) VALUES (?)", ("Charlie",))
+        cursor.execute("INSERT INTO users (name) VALUES (?)", ("Dave",))
+        conn.commit()
+        
+        print("Users in DB:")
+        for row in cursor.execute("SELECT * FROM users") {
+            print(f"  User: {row}")
+        }
+        
+    } except sqlite3.Error as e {
+        print(f"Database error: {e}")
+    } finally {
+        conn.close()
+    }
+}
+
+def test_regex() {
+    print("\n--- Testing Regex ---")
+    text = "Contact us at support@bpython.org or sales@example.com"
+    pattern = r"[\w\.-]+@[\w\.-]+"
+    
+    emails = re.findall(pattern, text)
+    print(f"Found emails: {emails}")
+    
+    match_obj = re.search(r"(\w+)@(\w+)\.org", text)
+    if match_obj {
+        print(f"Found org email user: {match_obj.group(1)}")
+    }
+}
+
+def main() {
+    test_json()
+    test_csv()
+    test_sqlite()
+    test_regex()
+}
+
+if __name__ == "__main__" {
+    main()
+}

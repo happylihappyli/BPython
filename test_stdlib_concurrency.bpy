@@ -1,0 +1,85 @@
+import threading
+import time
+import urllib.request
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+# Simple HTTP Handler
+class SimpleHandler(BaseHTTPRequestHandler) {
+    def do_GET(self) {
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Hello from BPython Server!")
+    }
+    
+    def log_message(self, format, *args) {
+        # Silence logging for clean output
+        pass
+    }
+}
+
+def start_server(port) {
+    server_address = ('localhost', port)
+    httpd = HTTPServer(server_address, SimpleHandler)
+    print(f"Server started on port {port}")
+    httpd.handle_request() # Handle one request then exit
+    print("Server stopped")
+}
+
+def test_threading_network() {
+    print("\n--- Testing Threading & Network ---")
+    port = 8888
+    
+    # Start server in a thread
+    t = threading.Thread(target=start_server, args=(port,))
+    t.start()
+    
+    # Give it a moment to start
+    time.sleep(0.5)
+    
+    # Make a request
+    try {
+        url = f"http://localhost:{port}"
+        print(f"Requesting {url}...")
+        with urllib.request.urlopen(url) as response {
+            body = response.read().decode('utf-8')
+            print(f"Response: {body}")
+        }
+    } except Exception as e {
+        print(f"Error: {e}")
+    }
+    
+    t.join()
+}
+
+def worker_task(name, count) {
+    print(f"Worker {name} starting")
+    for i in range(count) {
+        time.sleep(0.1)
+        # print(f"Worker {name}: {i}")
+    }
+    print(f"Worker {name} finished")
+}
+
+def test_multithreading() {
+    print("\n--- Testing Multiple Threads ---")
+    threads = []
+    for i in range(3) {
+        t = threading.Thread(target=worker_task, args=(f"T{i}", 3))
+        threads.append(t)
+        t.start()
+    }
+    
+    for t in threads {
+        t.join()
+    }
+    print("All threads done")
+}
+
+def main() {
+    test_multithreading()
+    test_threading_network()
+}
+
+if __name__ == "__main__" {
+    main()
+}

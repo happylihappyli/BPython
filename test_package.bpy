@@ -1,0 +1,12 @@
+import pkg_bpy
+import pkg_bpy.sub_mod
+
+def main() {
+    print("Testing package imports:")
+    pkg_bpy.pkg_hello()
+    pkg_bpy.sub_mod.sub_hello()
+}
+
+if (__name__ == "__main__") {
+    main()
+}

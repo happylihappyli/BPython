@@ -1,0 +1,92 @@
+import sys
+import subprocess
+import os
+
+# 尝试导入可选的 TTS 库
+try {
+    import pyttsx3
+    HAS_PYTTSX3 = True
+} except ImportError {
+    HAS_PYTTSX3 = False
+}
+
+try {
+    import win32com.client
+    HAS_WIN32 = True
+} except ImportError {
+    HAS_WIN32 = False
+}
+
+class TextToSpeech {
+    def __init__(self) {
+        self.method = "none"
+        
+        if HAS_PYTTSX3 {
+            try {
+                self.engine = pyttsx3.init()
+                self.method = "pyttsx3"
+            } except Exception as e {
+                print(f"pyttsx3 init failed: {e}")
+            }
+        }
+        
+        if self.method == "none" and HAS_WIN32 {
+            try {
+                self.speaker = win32com.client.Dispatch("SAPI.SpVoice")
+                self.method = "sapi"
+            } except Exception as e {
+                print(f"SAPI init failed: {e}")
+            }
+        }
+        
+        if self.method == "none" and sys.platform == "win32" {
+            self.method = "powershell"
+        }
+        
+        print(f"TTS Engine initialized using: {self.method}")
+    }
+    
+    def speak(self, text) {
+        print(f"Saying: '{text}'")
+        
+        match self.method {
+            case "pyttsx3" {
+                self.engine.say(text)
+                self.engine.runAndWait()
+            }
+            case "sapi" {
+                self.speaker.Speak(text)
+            }
+            case "powershell" {
+                # 使用 PowerShell 的 System.Speech.Synthesis
+                cmd = f"Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('{text}')"
+                subprocess.run(["powershell", "-Command", cmd], capture_output=True)
+            }
+            case _ {
+                print("No TTS engine available to speak.")
+            }
+        }
+    }
+}
+
+def main() {
+    tts = TextToSpeech()
+    
+    greetings = [
+        "你好",
+        "BPython speech test.",
+        "System ready."
+    ]
+    
+    for msg in greetings {
+        tts.speak(msg)
+    }
+    
+    if tts.method == "none" {
+        print("\nTip: Install pyttsx3 or run on Windows for sound.")
+    }
+}
+
+if __name__ == "__main__" {
+    main()
+}
