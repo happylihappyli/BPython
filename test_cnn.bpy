@@ -1,0 +1,300 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib import font_manager as fm
+from sklearn.datasets import load_digits
+from sklearn.model_selection import train_test_split
+import os
+
+# ---------------------------------------------------------
+# 1. 字体配置函数 (复用之前的逻辑)
+# ---------------------------------------------------------
+def ensure_chinese_font() {
+    """在 Windows 上自动选择支持中文的 Matplotlib 字体"""
+    candidates = [
+        "Microsoft YaHei", "SimHei", "SimSun", "KaiTi", "FangSong",
+        "Microsoft JhengHei", "Arial Unicode MS"
+    ]
+    chosen_font = None
+    
+    # 1. 尝试通过名称查找
+    for name in candidates {
+        try {
+            p = fm.findfont(name, fallback_to_default=False)
+            if os.path.exists(p) {
+                chosen_font = name
+                break
+            }
+        } except Exception {
+            continue
+        }
+    }
+    
+    # 2. 如果没找到，尝试直接查找文件
+    if not chosen_font {
+        font_files = [
+            r"C:\Windows\Fonts\msyh.ttc",
+            r"C:\Windows\Fonts\simhei.ttf",
+        ]
+        for fpath in font_files {
+            if os.path.exists(fpath) {
+                try {
+                    prop = fm.FontProperties(fname=fpath)
+                    chosen_font = prop.get_name()
+                    break
+                } except Exception {
+                    continue
+                }
+            }
+        }
+    }
+
+    if chosen_font {
+        sns.set(style="whitegrid", font=chosen_font)
+        plt.rcParams['font.sans-serif'] = [chosen_font]
+        print(f"DEBUG: Font set to '{chosen_font}'")
+    } else {
+        sns.set_style("whitegrid")
+        print("WARNING: No Chinese font found.")
+    }
+    plt.rcParams['axes.unicode_minus'] = False
+}
+
+ensure_chinese_font()
+
+# ---------------------------------------------------------
+# 2. 简单的 Numpy CNN 实现 (前向 + 训练)
+# ---------------------------------------------------------
+
+class Conv3x3 {
+    """一个简单的 3x3 卷积层"""
+    def __init__(self, num_filters) {
+        self.num_filters = num_filters
+        # 随机初始化卷积核: (num_filters, 3, 3) / 9.0 归一化
+        self.filters = np.random.randn(num_filters, 3, 3) / 9.0
+    }
+
+    def iterate_regions(self, image) {
+        """生成图像的所有 3x3 区域 (Valid Padding)"""
+        h, w = image.shape
+        for i in range(h - 2) {
+            for j in range(w - 2) {
+                im_region = image[i:(i + 3), j:(j + 3)]
+                yield im_region, i, j
+            }
+        }
+    }
+
+    def forward(self, input) {
+        """
+        执行前向传播
+        input: 2D numpy array (H, W)
+        output: 3D numpy array (num_filters, H-2, W-2)
+        """
+        self.last_input = input
+        h, w = input.shape
+        output = np.zeros((h - 2, w - 2, self.num_filters))
+
+        for im_region, i, j in self.iterate_regions(input) {
+            output[i, j] = np.sum(im_region * self.filters, axis=(1, 2))
+        }
+        return output
+    }
+
+    def backward(self, d_L_d_out, learn_rate) {
+        """根据上游梯度更新卷积核
+        d_L_d_out: 形状 (H-2, W-2, num_filters)
+        """
+        grad_filters = np.zeros_like(self.filters)
+        for im_region, i, j in self.iterate_regions(self.last_input) {
+            for f in range(self.num_filters) {
+                grad_filters[f] += im_region * d_L_d_out[i, j, f]
+            }
+        }
+        self.filters -= learn_rate * grad_filters
+        return None
+    }
+}
+
+class MaxPool2 {
+    """一个简单的 2x2 最大池化层"""
+    def iterate_regions(self, image) {
+        """生成不重叠的 2x2 区域"""
+        h, w, _ = image.shape
+        new_h = h // 2
+        new_w = w // 2
+
+        for i in range(new_h) {
+            for j in range(new_w) {
+                im_region = image[(i * 2):(i * 2 + 2), (j * 2):(j * 2 + 2)]
+                yield im_region, i, j
+            }
+        }
+    }
+
+    def forward(self, input) {
+        """
+        input: 3D numpy array (H, W, num_filters)
+        output: 3D numpy array (H/2, W/2, num_filters)
+        """
+        self.last_input = input
+        h, w, num_filters = input.shape
+        output = np.zeros((h // 2, w // 2, num_filters))
+
+        for im_region, i, j in self.iterate_regions(input) {
+            output[i, j] = np.amax(im_region, axis=(0, 1))
+        }
+        return output
+    }
+
+    def backward(self, d_L_d_out) {
+        """最大池化反传：梯度仅传递给前向时的最大值位置"""
+        d_L_d_input = np.zeros_like(self.last_input)
+        h, w, num_filters = self.last_input.shape
+        for im_region, i, j in self.iterate_regions(self.last_input) {
+            h_start = i * 2
+            w_start = j * 2
+            region = self.last_input[h_start:h_start+2, w_start:w_start+2]
+            for f in range(num_filters) {
+                sub = region[:, :, f]
+                (r, c) = np.unravel_index(np.argmax(sub), sub.shape)
+                d_L_d_input[h_start + r, w_start + c, f] = d_L_d_out[i, j, f]
+            }
+        }
+        return d_L_d_input
+    }
+}
+
+class Softmax {
+    """Softmax 层"""
+    def __init__(self, input_len, nodes) {
+        self.weights = np.random.randn(input_len, nodes) / input_len
+        self.biases = np.zeros(nodes)
+    }
+
+    def forward(self, input) {
+        """
+        input: 3D numpy array (H, W, num_filters) -> Flattened
+        output: 1D numpy array (probabilities)
+        """
+        input_len, nodes = self.weights.shape
+        input = input.flatten()
+        self.last_input_shape = (input.shape)
+        self.last_input = input
+
+        totals = np.dot(input, self.weights) + self.biases
+        totals = totals - np.max(totals)  # 数值稳定化
+        exp = np.exp(totals)
+        return exp / (np.sum(exp, axis=0) + 1e-10)
+    }
+
+    def backward(self, d_L_d_out, learn_rate) {
+        """交叉熵 + softmax的梯度简化：dL/dtotals = probs - one_hot"""
+        # d_L_d_out 是对 totals 的梯度
+        dW = np.outer(self.last_input, d_L_d_out)
+        db = d_L_d_out
+        self.weights -= learn_rate * dW
+        self.biases  -= learn_rate * db
+        # 传回输入梯度
+        d_input = self.weights @ d_L_d_out
+        return d_input.reshape(self.last_input_shape)
+    }
+}
+
+# ---------------------------------------------------------
+# 3. 训练与评估
+# ---------------------------------------------------------
+
+def load_data() {
+    """加载 sklearn digits 数据集并切分训练/测试"""
+    digits = load_digits()
+    X = digits.images.astype(np.float32) / 16.0  # 归一化到 [0,1]
+    y = digits.target.astype(np.int64)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+    return X_train, X_test, y_train, y_test
+}
+
+def train_epoch(conv, pool, softmax, X, y, lr) {
+    """单个训练轮次，返回平均损失与准确率"""
+    total_loss = 0.0
+    correct = 0
+    for idx in range(len(X)) {
+        image = X[idx]
+        label = y[idx]
+        # 前向
+        out_conv = conv.forward(image)
+        out_pool = pool.forward(out_conv)
+        probs = softmax.forward(out_pool)
+        # 损失与预测
+        loss = -np.log(probs[label] + 1e-10)
+        total_loss += loss
+        pred = np.argmax(probs)
+        if pred == label { correct += 1 }
+        # 反传 (softmax + CE)
+        d_L_d_out = probs
+        d_L_d_out[label] -= 1
+        # Softmax 反传
+        d_input_soft = softmax.backward(d_L_d_out, lr)
+        # MaxPool 反传
+        d_input_pool = pool.backward(d_input_soft.reshape(out_pool.shape))
+        # Conv 反传 (更新滤波器)
+        conv.backward(d_input_pool, lr)
+    }
+    return (total_loss / len(X), correct / len(X))
+}
+
+def evaluate(conv, pool, softmax, X, y) {
+    """评估模型在测试集上的准确率"""
+    correct = 0
+    for idx in range(len(X)) {
+        image = X[idx]
+        label = y[idx]
+        probs = softmax.forward(pool.forward(conv.forward(image)))
+        pred = np.argmax(probs)
+        if pred == label { correct += 1 }
+    }
+    return correct / len(X)
+}
+
+def run_training() {
+    """完整的训练与评估流程，包含损失与准确率可视化"""
+    print("="*50)
+    print("初始化 Numpy CNN 训练...")
+    print("结构: Input(8x8) -> Conv3x3(8 filters) -> MaxPool2 -> Softmax(10)")
+    # 数据
+    X_train, X_test, y_train, y_test = load_data()
+    # 模型
+    conv = Conv3x3(8)
+    pool = MaxPool2()
+    softmax = Softmax(3 * 3 * 8, 10)  # 8x8 -> 6x6 -> 3x3
+    # 训练
+    lr = 0.002
+    epochs = 5
+    history_loss = []
+    history_acc = []
+    for ep in range(1, epochs + 1) {
+        avg_loss, train_acc = train_epoch(conv, pool, softmax, X_train, y_train, lr)
+        test_acc = evaluate(conv, pool, softmax, X_test, y_test)
+        history_loss.append(avg_loss)
+        history_acc.append(test_acc)
+        print(f"Epoch {ep}: loss={avg_loss:.4f}, train_acc={train_acc:.4f}, test_acc={test_acc:.4f}")
+    }
+    # 可视化
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+    fig.suptitle('Digits: Numpy CNN 训练过程', fontsize=16)
+    axes[0].plot(history_loss, marker='o')
+    axes[0].set_title('训练平均损失')
+    axes[0].set_xlabel('轮次')
+    axes[0].set_ylabel('损失')
+    axes[1].plot(history_acc, marker='o', color='green')
+    axes[1].set_title('测试集准确率')
+    axes[1].set_xlabel('轮次')
+    axes[1].set_ylabel('准确率')
+    plt.tight_layout()
+    plt.show()
+    print("训练完成。")
+}
+
+if __name__ == "__main__" {
+    run_training()
+}

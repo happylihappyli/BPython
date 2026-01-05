@@ -484,7 +484,7 @@ class _CallableGenericAlias(GenericAlias):
     def __repr__(self):
         if len(self.__args__) == 2 and _is_param_expr(self.__args__[0]):
             return super().__repr__()
-        from annotationlib import type_repr
+        from typing import _type_repr as type_repr
         return (f'collections.abc.Callable'
                 f'[[{", ".join([type_repr(a) for a in self.__args__[:-1]])}], '
                 f'{type_repr(self.__args__[-1])}]')

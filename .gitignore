@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+/src/Python-3.12.2/Lib/__pycache__
+*.pyc
+/src/Python-3.12.2/Lib/site-packages
+*.pyc
+/src/Python-3.12.2/Lib/__pycache__
+/src/Python-3.12.2/PCbuild/obj
