@@ -1,0 +1,126 @@
+# -*- coding: utf-8 -*-
+import asyncio
+import os
+from aiortc import RTCPeerConnection, RTCSessionDescription
+from PIL import Image, ImageDraw
+
+# Generate a source image
+def generate_image(filename) {
+    print(f"Generating image: {filename}")
+    img = Image.new('RGB', (100, 100), color = 'blue')
+    d = ImageDraw.Draw(img)
+    d.text((10,10), "BPython", fill=(255,255,255))
+    img.save(filename)
+}
+
+async def main() {
+    print("WebRTC Media Test: Starting...")
+    
+    src_file = "test_src.png"
+    dst_file = "test_dst.png"
+    
+    # Ensure source image exists
+    generate_image(src_file)
+    
+    # Remove destination file if exists
+    if os.path.exists(dst_file) {
+        os.remove(dst_file)
+    }
+    
+    pc1 = RTCPeerConnection()
+    pc2 = RTCPeerConnection()
+    
+    # Completion event
+    done = asyncio.Event()
+    
+    # Create data channels
+    text_channel = pc1.createDataChannel("text_chat")
+    file_channel = pc1.createDataChannel("file_transfer")
+    
+    # Monitor connection states
+    def log_state(pc, name) {
+        print(f"{name} connection state: {pc.connectionState}")
+        print(f"{name} ice connection state: {pc.iceConnectionState}")
+    }
+    
+    # Event handlers for pc1 channels
+    def on_text_open() {
+        print("Text channel opened! Sending text...")
+        text_channel.send("This is a text message from pc1")
+    }
+    text_channel.on("open", on_text_open)
+    
+    def on_file_open() {
+        print("File channel opened! Sending image...")
+        with open(src_file, "rb") as f {
+            data = f.read()
+            file_channel.send(data)
+        }
+        print(f"Sent {os.path.getsize(src_file)} bytes")
+    }
+    file_channel.on("open", on_file_open)
+
+    # Event handlers for pc2
+    def on_datachannel(channel) {
+        print(f"pc2 received data channel: {channel.label}")
+        
+        if channel.label == "text_chat" {
+            def on_text_message(message) {
+                print(f"pc2 received text: {message}")
+            }
+            channel.on("message", on_text_message)
+        } 
+        elif channel.label == "file_transfer" {
+            def on_file_message(message) {
+                print(f"pc2 received file data: {len(message)} bytes")
+                with open(dst_file, "wb") as f {
+                    f.write(message)
+                }
+                print(f"Saved received image to {dst_file}")
+                # Signal completion
+                done.set()
+            }
+            channel.on("message", on_file_message)
+        }
+    }
+    pc2.on("datachannel", on_datachannel)
+    
+    # Signaling exchange
+    offer = await pc1.createOffer()
+    await pc1.setLocalDescription(offer)
+    await pc2.setRemoteDescription(offer)
+    
+    answer = await pc2.createAnswer()
+    await pc2.setLocalDescription(answer)
+    await pc1.setRemoteDescription(answer)
+    
+    print("Signaling complete. Waiting for transfer...")
+    
+    # Wait for completion with timeout
+    try {
+        await asyncio.wait_for(done.wait(), timeout=10.0)
+        print("Transfer completed successfully!")
+    } except asyncio.TimeoutError {
+        print("Timeout waiting for transfer.")
+        log_state(pc1, "pc1")
+        log_state(pc2, "pc2")
+    }
+    
+    # Verify result
+    if os.path.exists(dst_file) {
+        print("Success: Destination file exists!")
+        print(f"Source size: {os.path.getsize(src_file)}")
+        print(f"Dest size: {os.path.getsize(dst_file)}")
+    } else {
+        print("Error: Destination file not found!")
+    }
+    
+    await pc1.close()
+    await pc2.close()
+    print("WebRTC Media Test: Finished")
+}
+
+if __name__ == "__main__" {
+    # Use asyncio.run() to properly manage the event loop
+    asyncio.run(main())
+}

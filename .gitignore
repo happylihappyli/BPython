@@ -36,3 +36,9 @@
 *.pyc
 /src/Python-3.12.2/Lib/__pycache__
 /src/Python-3.12.2/PCbuild/obj
+/src/Python-3.12.2/externals/pythonx86/tools/Lib/__phello__/__pycache__
+/src/Python-3.12.2/PCbuild/obj
+*.pyc
+/src/Python-3.12.2/Lib/asyncio/__pycache__
+/src/Python-3.12.2/Lib/__pycache__
+/src/Python-3.12.2/externals

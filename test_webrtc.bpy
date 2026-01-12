@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+import asyncio
+from aiortc import RTCPeerConnection, RTCSessionDescription
+from aiortc.contrib.media import MediaPlayer
+
+async def main() {
+    print("WebRTC Test: Starting...")
+    
+    # Create two peer connections (representing two peers)
+    pc1 = RTCPeerConnection()
+    pc2 = RTCPeerConnection()
+    
+    print("Created RTCPeerConnection objects for pc1 and pc2")
+
+    # Create a data channel on pc1
+    channel = pc1.createDataChannel("chat")
+    print("Created data channel 'chat' on pc1")
+    
+    # Define channel event handlers using BPython syntax
+    def on_open() {
+        print("Channel opened!")
+        channel.send("Hello from pc1!")
+    }
+    channel.on("open", on_open)
+    
+    def on_message(message) {
+        print(f"pc1 received message: {message}")
+    }
+    channel.on("message", on_message)
+
+    # Define pc2 event handlers
+    def on_datachannel(channel) {
+        print(f"pc2 received data channel: {channel.label}")
+        
+        def on_pc2_message(message) {
+            print(f"pc2 received message: {message}")
+            channel.send("Hello back from pc2!")
+        }
+        channel.on("message", on_pc2_message)
+    }
+    pc2.on("datachannel", on_datachannel)
+    
+    # Create offer
+    print("pc1 creating offer...")
+    offer = await pc1.createOffer()
+    await pc1.setLocalDescription(offer)
+    await pc2.setRemoteDescription(offer)
+    
+    # Create answer
+    print("pc2 creating answer...")
+    answer = await pc2.createAnswer()
+    await pc2.setLocalDescription(answer)
+    await pc1.setRemoteDescription(answer)
+    
+    print("Signaling complete. Waiting for data channel to open...")
+    
+    # Wait for a bit to let the connection establish and messages exchange
+    await asyncio.sleep(2)
+    
+    print("Closing connections...")
+    await pc1.close()
+    await pc2.close()
+    print("WebRTC Test: Finished")
+}
+
+if __name__ == "__main__" {
+    # Run the async main function
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
+}

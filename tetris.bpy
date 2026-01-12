@@ -1,0 +1,270 @@
+# -*- coding: utf-8 -*-
+import tkinter as tk
+import random
+
+class Tetris {
+    def __init__(self, root) {
+        """
+        初始化游戏界面和状态
+        Initialize game interface and state
+        """
+        self.root = root
+        self.root.title("Tetris BPython")
+        self.root.geometry("300x550")
+        self.root.resizable(False, False)
+
+        self.cols = 10
+        self.rows = 20
+        self.cell_size = 25
+        
+        self.canvas = tk.Canvas(self.root, width=self.cols*self.cell_size, height=self.rows*self.cell_size, bg="black")
+        self.canvas.pack()
+        
+        self.score_label = tk.Label(self.root, text="Score: 0", font=("Arial", 14))
+        self.score_label.pack()
+        
+        # Define shapes: I, O, T, S, Z, J, L
+        self.shapes = [
+            [[1, 1, 1, 1]],
+            [[1, 1], [1, 1]],
+            [[0, 1, 0], [1, 1, 1]],
+            [[0, 1, 1], [1, 1, 0]],
+            [[1, 1, 0], [0, 1, 1]],
+            [[1, 0, 0], [1, 1, 1]],
+            [[0, 0, 1], [1, 1, 1]]
+        ]
+        
+        self.colors = ["black", "cyan", "yellow", "purple", "green", "red", "blue", "orange"]
+        
+        self.reset_game()
+        
+        self.root.bind("<Left>", self.move_left)
+        self.root.bind("<Right>", self.move_right)
+        self.root.bind("<Up>", self.rotate_shape)
+        self.root.bind("<Down>", self.move_down)
+        
+        self.timer_interval = 500
+        self.run_game()
+    }
+    
+    def reset_game(self) {
+        """
+        重置游戏数据
+        Reset game data
+        """
+        self.board = []
+        for r in range(self.rows) {
+            self.board.append([0] * self.cols)
+        }
+        self.score = 0
+        self.game_over = False
+        self.new_piece()
+    }
+    
+    def new_piece(self) {
+        """
+        生成新方块
+        Generate a new piece
+        """
+        idx = random.randint(0, len(self.shapes) - 1)
+        self.current_shape = self.shapes[idx]
+        self.current_color_idx = idx + 1
+        self.piece_x = self.cols // 2 - len(self.current_shape[0]) // 2
+        self.piece_y = 0
+        
+        if self.check_collision(self.current_shape, self.piece_x, self.piece_y) {
+            self.game_over = True
+            self.draw_board()
+        } else {
+            self.draw_board()
+        }
+    }
+    
+    def check_collision(self, shape, x, y) {
+        """
+        检查碰撞
+        Check for collision
+        """
+        for r in range(len(shape)) {
+            for c in range(len(shape[r])) {
+                if shape[r][c] != 0 {
+                    if x + c < 0 or x + c >= self.cols or y + r >= self.rows {
+                        return True
+                    }
+                    if y + r >= 0 and self.board[y + r][x + c] != 0 {
+                        return True
+                    }
+                }
+            }
+        }
+        return False
+    }
+    
+    def rotate_shape(self, event=None) {
+        """
+        旋转方块
+        Rotate the shape
+        """
+        if self.game_over { return }
+        
+        # Transpose and reverse rows for 90 degree rotation
+        new_shape = []
+        rows = len(self.current_shape)
+        cols = len(self.current_shape[0])
+        
+        for c in range(cols) {
+            new_row = []
+            for r in range(rows - 1, -1, -1) {
+                new_row.append(self.current_shape[r][c])
+            }
+            new_shape.append(new_row)
+        }
+        
+        if not self.check_collision(new_shape, self.piece_x, self.piece_y) {
+            self.current_shape = new_shape
+            self.draw_board()
+        }
+    }
+    
+    def move_left(self, event=None) {
+        """
+        向左移动
+        Move left
+        """
+        if self.game_over { return }
+        if not self.check_collision(self.current_shape, self.piece_x - 1, self.piece_y) {
+            self.piece_x -= 1
+            self.draw_board()
+        }
+    }
+    
+    def move_right(self, event=None) {
+        """
+        向右移动
+        Move right
+        """
+        if self.game_over { return }
+        if not self.check_collision(self.current_shape, self.piece_x + 1, self.piece_y) {
+            self.piece_x += 1
+            self.draw_board()
+        }
+    }
+    
+    def move_down(self, event=None) {
+        """
+        向下移动
+        Move down
+        """
+        if self.game_over { return }
+        if not self.check_collision(self.current_shape, self.piece_x, self.piece_y + 1) {
+            self.piece_y += 1
+            self.draw_board()
+        } else {
+            self.lock_piece()
+        }
+    }
+    
+    def lock_piece(self) {
+        """
+        锁定方块并检查消除
+        Lock piece and check lines
+        """
+        for r in range(len(self.current_shape)) {
+            for c in range(len(self.current_shape[r])) {
+                if self.current_shape[r][c] != 0 {
+                    if self.piece_y + r >= 0 {
+                        self.board[self.piece_y + r][self.piece_x + c] = self.current_color_idx
+                    }
+                }
+            }
+        }
+        
+        self.clear_lines()
+        self.new_piece()
+    }
+    
+    def clear_lines(self) {
+        """
+        消除满行
+        Clear full lines
+        """
+        new_board = []
+        lines_cleared = 0
+        
+        for r in range(self.rows) {
+            if 0 not in self.board[r] {
+                lines_cleared += 1
+            } else {
+                new_board.append(self.board[r])
+            }
+        }
+        
+        # Add new empty lines at the top
+        for i in range(lines_cleared) {
+            new_board.insert(0, [0] * self.cols)
+        }
+        
+        self.board = new_board
+        if lines_cleared > 0 {
+            self.score += lines_cleared * 100
+            self.score_label.config(text=f"Score: {self.score}")
+        }
+    }
+    
+    def draw_board(self) {
+        """
+        绘制游戏界面
+        Draw game interface
+        """
+        self.canvas.delete("all")
+        
+        # Draw locked blocks
+        for r in range(self.rows) {
+            for c in range(self.cols) {
+                if self.board[r][c] != 0 {
+                    x1 = c * self.cell_size
+                    y1 = r * self.cell_size
+                    x2 = x1 + self.cell_size
+                    y2 = y1 + self.cell_size
+                    self.canvas.create_rectangle(x1, y1, x2, y2, fill=self.colors[self.board[r][c]], outline="white")
+                }
+            }
+        }
+        
+        # Draw current piece
+        if self.current_shape and not self.game_over {
+            for r in range(len(self.current_shape)) {
+                for c in range(len(self.current_shape[r])) {
+                    if self.current_shape[r][c] != 0 {
+                        x1 = (self.piece_x + c) * self.cell_size
+                        y1 = (self.piece_y + r) * self.cell_size
+                        x2 = x1 + self.cell_size
+                        y2 = y1 + self.cell_size
+                        self.canvas.create_rectangle(x1, y1, x2, y2, fill=self.colors[self.current_color_idx], outline="white")
+                    }
+                }
+            }
+        }
+        
+        if self.game_over {
+            self.canvas.create_text(self.cols * self.cell_size / 2, self.rows * self.cell_size / 2, text="GAME OVER", fill="white", font=("Arial", 20))
+        }
+    }
+    
+    def run_game(self) {
+        """
+        游戏主循环
+        Game main loop
+        """
+        if not self.game_over {
+            self.move_down()
+            self.root.after(self.timer_interval, self.run_game)
+        }
+    }
+}
+
+if __name__ == "__main__" {
+    root = tk.Tk()
+    app = Tetris(root)
+    root.mainloop()
+}

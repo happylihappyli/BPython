@@ -6,5 +6,5 @@
 @rem and using it outside of that context is ill-advised.
 @echo Running Release^|x64 interpreter...
 @setlocal
-@set PYTHONHOME=E:\GitHub3\cpp\BPython\src\Python-3.12.2\
-@"E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\amd64\python.exe" %*
+@set PYTHONHOME=E:\github\BPython\src\Python-3.12.2\
+@"E:\github\BPython\src\Python-3.12.2\PCbuild\amd64\python.exe" %*

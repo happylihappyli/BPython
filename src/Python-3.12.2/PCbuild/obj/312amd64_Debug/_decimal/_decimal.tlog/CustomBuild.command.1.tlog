@@ -1,2 +1,0 @@
-^E:\GITHUB3\CPP\BPYTHON\SRC\PYTHON-3.12.2\MODULES\_DECIMAL\LIBMPDEC\VCDIV64.ASM
-ml64 /nologo /c /Zi /Fo "E:\GitHub3\cpp\BPython\src\Python-3.12.2\PCbuild\obj\312amd64_Debug\_decimal\vcdiv64.obj" "E:\GitHub3\cpp\BPython\src\Python-3.12.2\Modules\_decimal\libmpdec\vcdiv64.asm"
