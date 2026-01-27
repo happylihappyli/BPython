@@ -1,0 +1,145 @@
+# -*- coding: utf-8 -*-
+print("Starting Browser...")
+import tkinter as tk
+from tkinter import ttk
+try {
+    from tkwebview2.tkwebview2 import WebView2
+    USE_WEBVIEW2 = True
+    print("Using WebView2")
+} except ImportError {
+    from tkhtmlview import HTMLLabel
+    USE_WEBVIEW2 = False
+    print("Using HTMLLabel")
+}
+import threading
+import requests
+
+class BrowserTab(tk.Frame) {
+    def __init__(self, parent) {
+        super().__init__(parent)
+        
+        # Navigation bar
+        self.nav_bar = tk.Frame(self, bg="#f0f0f0")
+        self.nav_bar.pack(fill="x", padx=5, pady=5)
+        
+        # URL Entry
+        self.url_var = tk.StringVar(value="https://www.bing.com")
+        self.url_entry = tk.Entry(self.nav_bar, textvariable=self.url_var)
+        self.url_entry.pack(side="left", fill="x", expand=True, padx=(0, 5))
+        self.url_entry.bind("<Return>", self.load_url)
+        
+        # Go Button
+        self.go_btn = tk.Button(self.nav_bar, text="Go", command=self.load_url)
+        self.go_btn.pack(side="left")
+        
+        # Content Area
+        self.webview = None
+        self.html_view = None
+        
+        if USE_WEBVIEW2 {
+            try {
+                self.webview = WebView2(self, 800, 600)
+                self.webview.pack(fill="both", expand=True)
+                self.load_url()
+            } except Exception as e {
+                print(f"WebView2 init failed: {e}")
+                self.init_fallback()
+            }
+        } else {
+            self.init_fallback()
+        }
+    }
+    
+    def init_fallback(self) {
+        try {
+            self.html_view = HTMLLabel(self, html="<h1>Welcome</h1>")
+            self.html_view.pack(fill="both", expand=True)
+            self.html_view.fit_height()
+        } except Exception {
+            self.html_view = tk.Text(self)
+            self.html_view.pack(fill="both", expand=True)
+        }
+    }
+    
+    def load_url(self, event=None) {
+        url = self.url_var.get()
+        if not url.startswith("http") {
+            url = "https://" + url
+            self.url_var.set(url)
+        }
+        
+        if self.webview {
+            self.webview.load_url(url)
+        } elif self.html_view {
+            self.load_html_fallback(url)
+        }
+    }
+    
+    def load_html_fallback(self, url) {
+        if hasattr(self.html_view, 'set_html') {
+            self.html_view.set_html("<h1>Loading...</h1>")
+        } else {
+            self.html_view.delete("1.0", "end")
+            self.html_view.insert("1.0", "Loading...")
+        }
+        
+        def fetch() {
+            try {
+                headers = {'User-Agent': 'Mozilla/5.0'}
+                response = requests.get(url, headers=headers)
+                html_content = response.text
+                
+                if hasattr(self.html_view, 'set_html') {
+                    self.html_view.set_html(html_content)
+                } else {
+                    self.html_view.delete("1.0", "end")
+                    self.html_view.insert("1.0", html_content)
+                }
+            } except Exception as e {
+                print(f"Fetch error: {e}")
+            }
+        }
+        threading.Thread(target=fetch, daemon=True).start()
+    }
+}
+
+class BrowserApp(tk.Tk) {
+    def __init__(self) {
+        super().__init__()
+        self.title("BPython Web Browser")
+        self.geometry("1024x768")
+        
+        # Main Layout
+        self.notebook = ttk.Notebook(self)
+        self.notebook.pack(fill="both", expand=True)
+        
+        # Tab Control Frame
+        self.tab_control_frame = tk.Frame(self)
+        self.tab_control_frame.pack(side="bottom", fill="x")
+        
+        self.add_tab_btn = tk.Button(self.tab_control_frame, text="New Tab", command=self.add_new_tab)
+        self.add_tab_btn.pack(side="left", padx=5, pady=5)
+        
+        # Add initial tab
+        self.add_new_tab()
+    }
+    
+    def add_new_tab(self) {
+        tab = BrowserTab(self.notebook)
+        self.notebook.add(tab, text="New Tab")
+        self.notebook.select(tab)
+    }
+}
+
+if __name__ == "__main__" {
+    print("Entering main")
+    try {
+        app = BrowserApp()
+        print("App created")
+        app.mainloop()
+    } except Exception as e {
+        print(f"Crash: {e}")
+        import traceback
+        traceback.print_exc()
+    }
+}
